@@ -1,24 +1,56 @@
 ---
 ---
 
+/********************************
+ *  Variables
+ *******************************/
 @import "variables/fonts";
 @import "variables/colors";
-@import "includes/nav";
 
+/********************************
+ *  Defaults
+ *******************************/
 html {
   margin: 0;
   padding: 0;
+  background-color: $color-background;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: $font-main;
+  color: $color-font-main;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-heading;
   font-weight: 700;
+  color: $color-font-heading;
 }
 
+h1 {
+  width: 100%;
+  font-size: 80px;
+  text-align: center;
+}
+
+a {
+  color: $color-link;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/********************************
+ *  Includes
+ *******************************/
+@import "includes/nav";
+@import "includes/avatar";
+
+/********************************
+ *  Pages
+ *******************************/
 @import "pages/home";

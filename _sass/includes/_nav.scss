@@ -1,0 +1,33 @@
+.main-navigation {
+  display: flex;
+  flex-direction: row-reverse;
+
+  ul {
+    margin: 30px;
+
+    li {
+      display: inline-block;
+
+      a {
+        text-transform: uppercase;
+        color: black;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.1s ease-in-out;
+        font-size: 24px;
+        margin-right: 40px;
+      }
+
+      a:hover {
+        color: $color-link;
+        box-shadow: 0 2px 0 0 $color-link;
+      }
+    }
+
+    li:last-child{
+      a {
+        margin-right: 20px;
+      }
+    }
+  }
+}

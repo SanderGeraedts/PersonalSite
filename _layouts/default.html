@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="nl">
+{% include head.html %}
+<body>
+{% include navigation.html %}
+<div class="container">
+    <h1>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</h1>
+    {{ content }}
+</div>
+{% include footer-links.html %}
+</body>
+</html>
