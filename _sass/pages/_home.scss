@@ -1,0 +1,146 @@
+.home {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  .avatar {
+    align-self: center;
+    justify-self: center;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 310px;
+    width: 310px;
+    border-radius: 100%;
+    background-color: #EFEFEF;
+    perspective: 1000px;
+
+    .flip {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      max-height: 300px;
+      max-width: 300px;
+      transition: transform 0.3s ease-out;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      border-radius: 100%;
+    }
+
+    &.hover {
+      .flip {
+        transform: rotateY(180deg);
+      }
+    }
+
+    .avatar-dev, .avatar-sports {
+      border-radius: 100%;
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      transition: transform 0.3s ease-out;
+    }
+
+    .avatar-dev {
+      z-index: -1;
+      transform: rotateY(180deg);
+    }
+
+    .avatar-sports {
+      z-index: 2;
+    }
+  }
+
+
+  .sport {
+    background-image: url("/assets/running.jpeg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75vw;
+    height: 100vh;
+  }
+
+  .sport-hover-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    height: 100vh;
+    z-index: 10;
+  }
+
+  .dev {
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transform-origin: top right;
+    height: 100vh;
+    width: 75vw;
+
+    .inner {
+      -webkit-transform: skew(-20deg, 0);
+      -moz-transform: skew(-20deg, 0);
+      -o-transform: skew(-20deg, 0);
+      transform: skew(-20deg, 0);
+      position: absolute;
+      top: 0;
+      right: -33%;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+
+      .img {
+        background-image: url("/assets/development.jpeg");
+        -webkit-transform: skew(20deg, 0);
+        -moz-transform: skew(20deg, 0);
+        -o-transform: skew(20deg, 0);
+        transform: skew(20deg, 0);
+        height: 100%;
+
+        position: absolute;
+        left: -33%;
+        right: 0;
+      }
+    }
+  }
+
+  .navigation {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 300;
+        line-height: 70px;
+      }
+
+      a.nav-logo {
+        font-size: 42px;
+        text-decoration: none;
+      }
+    }
+  }
+}
