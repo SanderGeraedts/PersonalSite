@@ -1,9 +1,5 @@
 ---
 ---
-
-/********************************
- *  Variables
- *******************************/
 @import "variables/fonts";
 @import "variables/colors";
 
@@ -20,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: $font-main;
+  font-size: 16pt;
   color: $color-font-main;
 }
 
@@ -27,12 +24,18 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-heading;
   font-weight: 700;
   color: $color-font-heading;
+
+  a {
+    color: $color-font-heading;
+    text-decoration: none;
+  }
 }
 
 h1 {
   width: 100%;
   font-size: 80px;
   text-align: center;
+  text-transform: capitalize;
 }
 
 a {
@@ -44,6 +47,30 @@ a {
   max-width: 800px;
 }
 
+h1 + p.date, h2 + p.date {
+  text-align: center;
+  margin-top: 0;
+}
+
+h1 + p.date {
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+
+
+/********************************
+ *  Helpers
+ *******************************/
+.f-center{
+  display: flex;
+  justify-content: center;
+}
+
+.t-center {
+  text-align: center;
+}
+
 /********************************
  *  Includes
  *******************************/
@@ -53,4 +80,4 @@ a {
 /********************************
  *  Pages
  *******************************/
-@import "pages/home";
+@import "pages/pages";

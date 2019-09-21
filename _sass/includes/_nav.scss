@@ -10,7 +10,7 @@
 
       a {
         text-transform: uppercase;
-        color: black;
+        color: $color-font-heading;
         font-weight: 700;
         text-decoration: none;
         transition: all 0.1s ease-in-out;
@@ -24,7 +24,7 @@
       }
     }
 
-    li:last-child{
+    li:last-child {
       a {
         margin-right: 20px;
       }

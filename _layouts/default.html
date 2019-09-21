@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="nl">
 {% include head.html %}
-<body>
+<body class="{{page.slug}}">
 {% include navigation.html %}
 <div class="container">
     <h1>{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}</h1>
+    {% if page.date %}<p class="date">Gepubliceerd op {% include date.html date=page.date %}</p>{% endif %}
     {{ content }}
 </div>
 {% include footer-links.html %}

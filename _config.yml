@@ -19,6 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Sander Geraedts
+job: Front-end Developer
+company: Sogeti
+company_url: https://www.sogeti.nl/
 email: sander.geraedts@sogeti.com
 description: >-
   Sander is een creatieve en analytische Front-end Developer met kennis van
@@ -40,8 +43,10 @@ plugins:
   - jekyll-feed
 
 collections:
-  - portfolios
-  - blogs
+  portfolios:
+    output: true
+  blogs:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
