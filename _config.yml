@@ -23,6 +23,7 @@ job: Front-end Developer
 company: Sogeti
 company_url: https://www.sogeti.nl/
 email: sander.geraedts@sogeti.com
+permalink: /:categories/:title/
 description: >-
   Sander is een creatieve en analytische Front-end Developer met kennis van
   zowel web als mobile development. Sander heeft altijd gewerkt aan web projecten
